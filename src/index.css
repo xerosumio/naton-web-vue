@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust based on your header height */
+}
+
+body {
+  @apply overflow-x-hidden;
+}
+
+/* Active navigation state */
+a.active {
+  @apply text-blue-400;
+}
