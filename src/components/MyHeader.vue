@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'MyHeader',
   data() {
     return {
       mobileMenuOpen: false

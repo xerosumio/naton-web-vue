@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="font-sans">
-    <Header />
+    <MyHeader />
     <main>
       <HeroSection id="home" />
       <AboutSection id="about" />
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import MyHeader from './components/MyHeader.vue'
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ProjectsSection from './components/ProjectsSection.vue'
@@ -24,7 +24,7 @@ import FooterSection from './components/FooterSection.vue'
 export default {
   name: 'App',
   components: {
-    Header,
+    MyHeader,
     HeroSection,
     AboutSection,
     ProjectsSection,
