@@ -1,0 +1,185 @@
+/* General styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #e0e0e0;
+}
+
+/* Logo styling */
+.logo-center {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Particles.js container */
+#particles-js {
+    width: 100%;
+    height: 100%;
+    background-color: #2a2a2a; /* Lighter dark gray background */
+    pointer-events: auto !important; /* Ensure interactions work */
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Chat container styling */
+.chat-container {
+    scroll-behavior: smooth;
+    background-color: rgba(45, 45, 45, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    position: relative; /* For scrolling position */
+    overflow-y: auto !important; /* Ensure vertical scrolling is enabled */
+}
+
+/* Enhanced typing animation */
+.typing-animation {
+    display: inline-block;
+    min-height: 1em;
+    min-width: 1em;
+}
+
+.typing-animation::after {
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 1em;
+    background-color: #ffffff;
+    animation: blink 1s infinite;
+    margin-left: 2px;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Add input typing animation effect */
+.input-typing {
+    border-color: #4b8bf4 !important;
+    box-shadow: 0 0 0 2px rgba(75, 139, 244, 0.3);
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    color: white !important;
+}
+
+/* Force text color for inputs even when disabled */
+input[disabled] {
+    color: white !important;
+    opacity: 0.9 !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Custom chat bubble styles */
+.chat-bubble {
+    display: inline-block !important;
+    padding: 0.75rem !important;
+    margin: 0.25rem 0 !important;
+    max-width: 80%;
+    min-width: 2em;
+    word-wrap: break-word;
+    min-height: 1.5rem;
+    position: relative; /* For absolute positioning if needed */
+    overflow: visible !important; /* Ensure text isn't cut off */
+}
+
+/* Style for the text inside chat bubbles with forced visibility */
+.chat-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: white !important;
+    font-weight: 400;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 1em;
+}
+
+/* Force visibility class for text elements */
+.force-visible {
+    color: white !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    min-height: 1.2em;
+    padding: 2px 0;
+}
+
+/* Empty message placeholder */
+.chat-bubble:empty::before {
+    content: " ";
+    display: inline-block;
+}
+
+/* Scrollbar styling */
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background: #3a3a3a;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+/* Custom colors for chat bubbles */
+.chat-bubble-primary {
+    background-color: #4a5568 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Ensure that Alpine.js bound elements are visible */
+[x-text], [x-html] {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Fix for Alpine template rendering */
+[x-cloak] { display: none !important; }
+
+/* Debug styles - enable if needed */
+.debug-border {
+    border: 2px solid red !important;
+}
+
+/* Empty state handler */
+.chat-text:empty::before {
+    content: " ";
+    display: inline-block;
+}
+
+/* Robot typing indicator */
+.robot-typing-indicator {
+    display: flex;
+    align-items: center;
+    opacity: 0.8;
+    font-style: italic;
+    height: 20px;
+}
+
+/* Typing dots animation */
+.typing-dots {
+    display: inline-block;
+    overflow: hidden;
+    animation: typingDots 1.5s infinite;
+    width: 15px;
+    text-align: left;
+}
+
+@keyframes typingDots {
+    0% { content: "."; }
+    25% { content: ".."; }
+    50% { content: "..."; }
+    75% { content: ".."; }
+    100% { content: "."; }
+}
